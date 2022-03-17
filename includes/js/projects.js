@@ -53,7 +53,7 @@ function getProjects() {
        }) 
     })
     .catch(error => {
-        console.log('Error: ', error)
+        console.log('Error: ', error);
     })
 }
 
@@ -102,7 +102,7 @@ function addProject() {
         descriptionInput.value = "";
     })
     .catch(error => {
-        console.log('Error: ', error)
+        console.log('Error: ', error);
     })
 }
 
@@ -139,7 +139,7 @@ function updateProject(id) {
     // alla fält måste vara ifyllda
     if(title == "" || url == "" || description == "") {
         message.style.color = "red";
-        message.innerHTML = "Fyll i alla fält!"
+        message.innerHTML = "Fyll i alla fält!";
     } else {
         // om fält är ifyllda, gör en PUT till valt ID
         fetch("https://studenter.miun.se/~jeno2011/writeable/DT173G/Projekt/projektapi/projects.php?id=" + id, {
@@ -193,7 +193,7 @@ function deleteProject(id) {
         getProjects();
     })
     .catch(error => {
-        console.log('Error: ', error)
+        console.log('Error: ', error);
     })
 }
 

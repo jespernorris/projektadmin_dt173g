@@ -56,7 +56,7 @@ function getStudies() {
        }) 
     })
     .catch(error => {
-        console.log('Error: ', error)
+        console.log('Error: ', error);
     })
 }
 
@@ -108,7 +108,7 @@ function addStudy() {
         endInput.value = "";
     })
     .catch(error => {
-        console.log('Error: ', error)
+        console.log('Error: ', error);
     })
 }
 
@@ -148,7 +148,7 @@ function updateStudy(id) {
     // alla fält måste vara ifyllda
     if(location == "" || name == "" || startDate == "" || endDate == "") {
         message.style.color = "red";
-        message.innerHTML = "Fyll i alla fält!"
+        message.innerHTML = "Fyll i alla fält!";
     } else {
         // om fält är ifyllda, gör en PUT till valt ID
         fetch("https://studenter.miun.se/~jeno2011/writeable/DT173G/Projekt/projektapi/studies.php?id=" + id, {
@@ -203,7 +203,7 @@ function deleteStudy(id) {
         getStudies();
     })
     .catch(error => {
-        console.log('Error: ', error)
+        console.log('Error: ', error);
     })
 }
 
