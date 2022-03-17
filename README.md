@@ -27,3 +27,6 @@ Logout.php dirigerar dig tillbaka till front-delen och loggar ut dig från admin
 
 Sidorna manageprojects.php, managestudies.php och managework.php är där du hanterar den information som finns med i din portfolio, här finns ett formulär där nytt kan läggas till samt kan det användas för att göra ändringar i befintliga inlägg.
 Knappar för att ta bort och uppdatera finns bredvid varje rad i tabellen som informationen skrivs ut i och vid klick av uppdatera så byts även knappen "Lägg till" under formuläret ut till en knapp som läser "Uppdatera".
+
+## För att klona detta repo skriver du följande i din terminal
+`git clone https://github.com/jespernorris/projektadmin_dt173g.git`
