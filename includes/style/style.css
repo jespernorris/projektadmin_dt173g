@@ -1,0 +1,190 @@
+/* sätter global font/font-size */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+}
+
+/* sidans body */
+body {
+    background-color: rgb(228, 228, 228);
+    margin: 0px;
+}
+
+/* sidans meny */
+#menu {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 2em;
+}
+
+#menu a {
+    color: black;
+    font-size: 140%;
+    margin-left: 0.5em;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+/* burger-menu till små skärmar */
+.smallnav {
+    overflow: hidden;
+    display: none;
+}
+
+.smallnav a {
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+    background: rgb(228, 228, 228);
+    border: 1px solid black;
+}
+
+.smallnav a.icon {
+    background: rgb(228, 228, 228);
+    margin: 0 auto;
+    text-align: center;
+}
+
+ /* gömmer menyn tills burgaren klickas på */
+.smallnav #myLinks {
+    display: none;
+}
+
+.smallnav #myLinks a {
+    color: black;
+    font-weight: bold;
+}
+
+#loginbox {
+    margin-top: 10em;
+}
+
+/* sidans innehåll */
+#contentBox {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* artikel på "landingpage" */
+article {
+    padding-top: 1em;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/*  
+    formulären som används på sidorna:
+    utbildning, jobb, projekt, login 
+*/
+form {
+    text-align: center;
+    margin-top: 2em;
+}
+
+form input[type=submit] {
+    margin-top: 0.5em;
+}
+
+form input[type=text], form input[type=password] {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#studygrid, #workgrid, #projectgrid {
+    display: none;
+}
+
+/*  
+    tabeller som visar befintligt under sidorna:
+    utbildning, jobb, projekt
+*/
+table {
+    text-align: left;
+    margin: 0 auto;
+}
+
+td,th {
+    padding-left: 0.5em;
+}
+
+td a {
+    color: black;
+}
+
+.projectdesc {
+    width: 50%;
+}
+
+/* centrerar rubriker samt "error-meddelande" */
+h2, #message {
+    text-align: center;
+}
+
+/* för skärmar mindre än 1150px */
+@media screen and (max-width: 1150px) {
+    /* grid för utskrift av studier, arbetserfarenheter och projekt */
+    #studygrid, #workgrid, #projectgrid {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas: 
+          ". ."
+          ". ."; 
+        position: relative;
+    }
+
+    #studygrid ul, #workgrid ul, #projectgrid ul {
+        padding-inline-start: 0px;
+    }
+
+    #studygrid li, #workgrid li, #projectgrid li {
+        list-style: none;
+        margin-top: 1em;
+    }
+
+    #studytable, #worktable, #projecttable {
+        display: none;
+    }
+
+    .descproject {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .projectlist a {
+        color: black;
+    }
+}
+
+/* för skärmar mindre än 800px */
+@media screen and (max-width: 800px) {
+    /* visar hamburgarmenyn */
+    .smallnav {
+        display: initial;
+    }
+
+    /* gömmer menyn för stora skärmar */
+    #menu {
+        display: none;
+    }
+
+    article {
+        max-width: 70%;
+    }
+}
+
+/* för skärmar mindre än 600px */
+@media screen and (max-width: 600px) {
+    #contentBox {
+        max-width: 80%;
+    }
+}
+
+/* för skärmar mindre än 450px */
+@media screen and (max-width: 450px) {
+    #contentBox {
+        max-width: 90%;
+    }
+}
