@@ -13,13 +13,15 @@
 </head>
 <body>
     <nav>
+        <?php if(!isset($_SESSION['username'])) { ?>
         <div id="menu">
             <!-- visar meny beroende på om användaren är inloggad eller ej -->
-            <?php if(!isset($_SESSION['username'])) {
-            ?>  <a href="../projektfront">Tillbaks till CV</a>
-                <?php
+            <a href="../projektfront">Tillbaks till CV</a>
+        </div>
+        <?php
             } else {
-                ?>
+        ?>
+        <div id="menu">
                 <!-- visar inloggade användarens namn -->
                 <h2>Inloggad som: <?= $_SESSION['username'] ?></h2>
                 <a href="admin.php">Hem</a>
